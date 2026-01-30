@@ -13,13 +13,13 @@ const __dirname = path.dirname(__filename);
 const isGithubActor = process.env.NEXT_PUBLIC_GITHUB_ACTOR === "upsidedownlabs" || process.env.NEXT_PUBLIC_GITHUB_ACTOR === undefined;
 
 // Get the BASE_PATH dynamically
-const basePath = isGithubActor ? "" : "/Muscle_game";
+const basePath = isGithubActor ? "" : "/Muscle-Melody";
 
 
 // Define the manifest object
 const manifest = {
-  name: "Muscle_game",
-  short_name: "Muscle_game",
+  name: "Muscle-Melody",
+  short_name: "Muscle-Melody",
   start_url: `${basePath}/`,
   display: "standalone",
   icons: [
