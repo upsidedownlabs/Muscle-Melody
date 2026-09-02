@@ -23,8 +23,8 @@ const manifest = {
   start_url: `${basePath}/`,
   display: "standalone",
   icons: [
-    { src: `${basePath}/Muscle-logo-192x192.png`, sizes: "192x192", type: "image/png" },
-    { src: `${basePath}/Muscle-logo-512x512.png`, sizes: "512x512", type: "image/png" },
+    { src: `${basePath}/chords-logo-192x192.png`, sizes: "192x192", type: "image/png" },
+    { src: `${basePath}/chords-logo-512x512.png`, sizes: "512x512", type: "image/png" },
   ],
   screenshots: [
     { src: `${basePath}/screenshot-Muscle.png`, sizes: "1280x720", type: "image/png", form_factor: "wide" },
