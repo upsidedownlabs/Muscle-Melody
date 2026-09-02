@@ -10,24 +10,18 @@ dotenv.config();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const isGithubActor = process.env.NEXT_PUBLIC_GITHUB_ACTOR === "upsidedownlabs" || process.env.NEXT_PUBLIC_GITHUB_ACTOR === undefined;
-
-// Get the BASE_PATH dynamically
-const basePath = isGithubActor ? "" : "/Muscle-Melody";
-
-
 // Define the manifest object
 const manifest = {
   name: "Muscle-Melody",
   short_name: "Muscle-Melody",
-  start_url: `${basePath}/`,
+  start_url: "/",
   display: "standalone",
   icons: [
-    { src: `${basePath}/chords-logo-192x192.png`, sizes: "192x192", type: "image/png" },
-    { src: `${basePath}/chords-logo-512x512.png`, sizes: "512x512", type: "image/png" },
+    { src: "/chords-logo-192x192.png", sizes: "192x192", type: "image/png" },
+    { src: "/chords-logo-512x512.png", sizes: "512x512", type: "image/png" },
   ],
   screenshots: [
-    { src: `${basePath}/screenshot-Muscle.png`, sizes: "1280x720", type: "image/png", form_factor: "wide" },
+    { src: "/screenshot-Muscle.png", sizes: "1280x720", type: "image/png", form_factor: "wide" },
   ],
 };
 
