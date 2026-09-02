@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ModeToggle } from "./Theming/mode-toggle";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { Button } from "./ui/button";
+import { Badge } from "./ui/badge";
 import { useTheme } from "next-themes";
 
 const Navbar = ({ isDisplay }: { isDisplay: boolean }) => {
@@ -33,7 +34,12 @@ const Navbar = ({ isDisplay }: { isDisplay: boolean }) => {
               Muscle Melody
               </div>
             </Link>
-      
+            <Badge
+              variant={"outline"}
+              className="font-poppins tracking-wider font-thin h-fit rounded "
+            >
+              Archived
+            </Badge>
           </div>
           <div className="flex gap-0 md:gap-2 items-center">
             <ModeToggle disabled={!isDisplay} />

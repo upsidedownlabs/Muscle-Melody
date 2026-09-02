@@ -9,17 +9,15 @@ import {
 } from "next/font/google";
 import { cn } from "../lib/utils";
 import { Toaster } from "../components/ui/sonner";
+import MovedPopup from "../components/MovedPopup";
 import "./globals.css";
-const isGithubActor = process.env.NEXT_PUBLIC_GITHUB_ACTOR === "upsidedownlabs" || process.env.NEXT_PUBLIC_GITHUB_ACTOR === undefined;
-const basePath = isGithubActor ? "" : "/Muscle_game";
-
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Muscle_Melody",
   description: "Web Bluetooth based game application.",
-  manifest: `${basePath}/manifest.json`, // ✅ Dynamically set manifest path
+  manifest: "/manifest.json",
 };
 
 const lobsterTwo = Lobster_Two({
@@ -47,9 +45,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-      <link rel="manifest" href={`${basePath}/manifest.json`} /> {/* ✅ Dynamic manifest */}
-      </head>
       <body
         className={cn(
           lobsterTwo.variable,
@@ -66,6 +61,7 @@ export default function RootLayout({
         >
           {children}
           <Toaster richColors />
+          <MovedPopup />
         </ThemeProvider>
       </body>
     </html>
